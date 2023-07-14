@@ -1,0 +1,36 @@
+# MageINIC
+# Copyright (C) 2023 MageINIC <support@mageinic.com>
+#
+# NOTICE OF LICENSE
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see https://opensource.org/licenses/gpl-3.0.html.
+#
+# Do not edit or add to this file if you wish to upgrade this extension to newer
+# version in the future.
+#
+# @category MageINIC
+# @package MageINIC_NewsletterPopupGraphQl
+# @copyright Copyright (c) 2023 MageINIC (https://www.mageinic.com/)
+# @license https://opensource.org/licenses/gpl-3.0.html GNU General Public License,version 3 (GPL-3.0)
+# @author MageINIC <support@mageinic.com>
+
+type StoreConfig {
+    popup_type : String @doc(description: "popup type (MageINIC NewsletterPopup)")
+    popup_cookie_time : Int @doc(description: "popup display cookie in hour (MageINIC NewsletterPopup)")
+    popup_offer_url : String @doc(description: "offer page redirect url (MageINIC NewsletterPopup)")
+    popup_offer_image : OfferImageData!
+    @resolver(class: "\\MageINIC\\NewsletterPopupGraphQl\\Model\\Resolver\\OfferImage")
+    @doc(description: "offer image data (MageINIC NewsletterPopup)")
+}
+
+type OfferImageData @doc(description: "Contains details about the offer Image.") {
+    name: String @doc(description: "Image name.")
+    format: String @doc(description: "Image format")
+    full_path: String @doc(description: "Image full path.")
+}
