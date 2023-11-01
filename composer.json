@@ -1,6 +1,6 @@
 {
     "name": "mageinic/newsletter-popup-graph-ql",
-    "description": "Newsletter & Offer Popup GraphQl Extension by MageINIC Team",
+    "description": "Newsletter Popup GraphQL is a part of MageINIC Newsletter Popup extension that adds GraphQL features. This extension extends Newsletter Popup definitions.",
     "type": "magento2-module",
     "license": [
         "OSL-3.0",
